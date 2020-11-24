@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:title="@string/mainpage"
+        tools:icon="@drawable/taiyang" />
+    <item
+        android:id="@+id/secondFragment"
+        android:title="@string/secondpage"
+        tools:icon="@drawable/niunai" />
+
+    <item
+        android:id="@+id/mineFragment"
+        android:title="@string/minePage"
+        tools:icon="@drawable/niunai" />
+</menu>

@@ -4,4 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="main_fragment">Main Fragment</string>
     <string name="to_second_fragment">To Second Fragment</string>
+    <string name="mainpage">MainPage</string>
+    <string name="secondpage">SecondPage</string>
+    <string name="minePage">minePage</string>
 </resources>
