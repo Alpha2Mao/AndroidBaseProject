@@ -5,15 +5,15 @@
 
     <item
         android:id="@+id/mainFragment"
-        android:title="@string/mainpage"
-        tools:icon="@drawable/taiyang" />
+        android:icon="@drawable/taiyang"
+        android:title="@string/mainpage"/>
     <item
         android:id="@+id/secondFragment"
-        android:title="@string/secondpage"
-        tools:icon="@drawable/niunai" />
+        android:icon="@drawable/taiyang"
+        android:title="@string/secondpage"/>
 
     <item
         android:id="@+id/mineFragment"
-        android:title="@string/minePage"
-        tools:icon="@drawable/niunai" />
+        android:icon="@drawable/niunai"
+        android:title="@string/minePage" />
 </menu>
