@@ -10,18 +10,27 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_fragment"
         android:layout_centerInParent="true"
-        android:textSize="18sp"
-        />
+        android:text="@string/main_fragment"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_to_second_fragment"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_title"
-        android:textAllCaps="false"
-        android:text="@string/to_second_fragment"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/to_second_fragment"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/crash_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_to_second_fragment"
+        android:layout_centerHorizontal="true"
+        android:text="crash_button"
+        android:textAllCaps="false" />
 
 
 </RelativeLayout>

@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.tencent.bugly.crashreport.CrashReport;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link MainFragment#newInstance} factory method to
@@ -80,6 +82,12 @@ public class MainFragment extends Fragment {
                 .build().toBundle();
         view.findViewById(R.id.btn_to_second_fragment)
                 .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_secondFragment, bundle));
+        view.findViewById(R.id.crash_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CrashReport.testJavaCrash();
+            }
+        });
         return view;
     }
 }
