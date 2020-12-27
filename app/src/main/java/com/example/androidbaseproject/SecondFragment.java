@@ -13,10 +13,13 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.example.androidbaseproject.web.ProgressWebView;
+
 public class SecondFragment extends Fragment {
     private static final String TAG = SecondFragment.class.getSimpleName();
 
-    WebView mWebView;
+    private WebView mWebView;
+    private ProgressWebView mProgressWebView;
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -65,8 +68,16 @@ public class SecondFragment extends Fragment {
             mWebView.getSettings().setSafeBrowsingEnabled(true);
         }
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.setWebChromeClient(new WebChromeClient());
+//        mWebView.setWebChromeClient(new WebChromeClient());
         return view;
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mWebView.removeAllViews();
+        mWebView.destroy();
+        mWebView = null;
     }
 }
