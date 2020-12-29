@@ -5,32 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/main_fragment"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/btn_to_second_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_title"
-        android:layout_centerHorizontal="true"
-        android:text="@string/to_second_fragment"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/crash_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_to_second_fragment"
-        android:layout_centerHorizontal="true"
-        android:text="crash_button"
-        android:textAllCaps="false" />
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"/>
 
 
 </RelativeLayout>

@@ -1,3 +1,4 @@
-include ':lib_common'
+include ':weight'
+include ':base'
 include ':app'
 rootProject.name = "AndroidBaseProject"

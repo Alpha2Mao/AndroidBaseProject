@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="HLine" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:background">@color/design_default_color_background</item>
-        <item name="android:layout_height">@dimen/line_height</item>
-    </style>
-</resources>

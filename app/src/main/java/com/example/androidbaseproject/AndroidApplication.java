@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
 
+import com.baidu.mapapi.CoordType;
+import com.baidu.mapapi.SDKInitializer;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.mars.xlog.Log;
 import com.tencent.mars.xlog.Xlog;
@@ -23,16 +25,14 @@ public class AndroidApplication extends Application {
         super.onCreate();
         CrashReport.initCrashReport(getApplicationContext(), "02c1bf8860", false);
         initXlogSdk();
+        initBaiduMapSdk();
     }
 
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        String xcrashLogPath = mLogPath + "/" + getPackageName() + "/log/xcrash";
-        xcrash.XCrash.init(this, new XCrash.InitParameters()
-                .setLogDir(xcrashLogPath)
-        );
+        initXCrash();
     }
 
     /**
@@ -57,6 +57,24 @@ public class AndroidApplication extends Application {
             Log.setConsoleLogOpen(false);
             Log.appenderOpen(Xlog.LEVEL_INFO, Xlog.AppednerModeAsync, cachePath, logPath, logFileName, 0);
         }
+    }
+
+    /**
+     * 初始化xcrash组件
+     */
+    private void initXCrash(){
+        String xcrashLogPath = mLogPath + "/" + getPackageName() + "/log/xcrash";
+        xcrash.XCrash.init(this, new XCrash.InitParameters()
+                .setLogDir(xcrashLogPath)
+        );
+    }
+
+    /**
+     * 初始化百度sdk
+     */
+    private void initBaiduMapSdk(){
+        SDKInitializer.initialize(this);
+        SDKInitializer.setCoordType(CoordType.BD09LL);
     }
 
     static {
